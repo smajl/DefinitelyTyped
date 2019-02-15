@@ -1,5 +1,5 @@
 // Type definitions for relay-runtime 1.3
-// Project: https://github.com/facebook/relay
+// Project: https://github.com/facebook/relay, https://facebook.github.io/relay
 // Definitions by: Matt Martin <https://github.com/voxmatt>
 //                 Eloy Durán <https://github.com/alloy>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
@@ -78,10 +78,6 @@ export interface ConcreteBatchRequest {
 export function getRequest(taggedNode: GraphQLTaggedNode): ConcreteRequest;
 
 export type RequestNode = ConcreteRequest | ConcreteBatchRequest;
-
-// Using `enum` here to create a distinct type and `const` to ensure it doesn’t leave any generated code.
-// tslint:disable-next-line:no-const-enum
-export const enum FragmentReference {}
 
 export interface OperationBase {
     variables: object;
